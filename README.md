@@ -10,3 +10,12 @@ rafce
 
 ## 라이브러리 설치
 sass 설치 : `npm i sass`
+react-router-dom 설치 : `npm i react-router-dom`
+
+
+
+## 터미널로 git commit하는 방법
+git add .
+git status
+git commit -m "커밋 제목"
+git push -u origin main
