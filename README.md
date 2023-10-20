@@ -11,6 +11,7 @@ rafce
 ## 라이브러리 설치
 sass 설치 : `npm i sass`
 react-router-dom 설치 : `npm i react-router-dom`
+react-icons 설치 : `npm i react-icons`
 
 
 
