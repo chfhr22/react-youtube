@@ -33,8 +33,14 @@
             .info {
 
                 .author {
+                    font-size: 14px;
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    &:hover {
+                        color: var(--black100);
+                    }
                     &::after {
-                        content: ' | ';
+                        content: ' | '; 
                     }
                 }
                 .date {

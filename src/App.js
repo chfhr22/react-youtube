@@ -11,18 +11,23 @@ import Search from './pages/Search'
 import Video from './pages/Video'
 import ScrollTo from './utils/scrollTo'
 
+import Channel from './pages/Channel'
+
 const App = () => {
     return (
         <BrowserRouter>
             <ScrollTo />
             <Header />
-            <Main>
+            <Main> 
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/today' element={<Today />} />
                     <Route path='/youtuber' element={<Youtuber />} />
                     <Route path='/search/:searchId' element={<Search />} />
                     <Route path='/video/:videoId' element={<Video />} />
+                    <Route path='/channel/:channelId' element={<Channel />} />
+
+                    
                     <Route path='*' element={<Not />} />
                 </Routes>
             </Main>
