@@ -64,6 +64,38 @@
 
         .video__title {
             padding-top: 10px;
+            border-bottom: 1px solid var(--black500);
+        }
+        
+        .video__channel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+            .id {
+                font-weight: 800;
+
+                a {
+                    border: 1px solid var(--black300);
+                    padding: 7px 20px;
+                    border-radius: 30px;
+                }
+            }
+            .count {
+
+                span {
+                    border: var(--black300);
+                    padding: 7px 20px;
+                    border-radius: 30px;
+                    margin-left: 5px;
+                    // background-color: var(--black);
+                    // color: var(--white);
+                }
+            }
+            .desc {
+                margin-top: 30px;
+                white-space: pre-line;
+            }
         }
     }
 }

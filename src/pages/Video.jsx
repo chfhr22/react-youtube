@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { fetchFromAPI } from '../utils/api';
 import ReactPlayer from 'react-player';
+import { GrView, GrLike, GrTooltip} from "react-icons/gr";
 
 const Video = () => {
     const { videoId } = useParams();
@@ -33,13 +35,18 @@ const Video = () => {
                             {videoDetail.snippet.title}
                         </h2>
                         <div className="video__channel">
-                            <div className="id">{videoDetail.snippet.channelTitle}</div>
+                            <div className="id">
+                                <Link to={`/channel/${videoDetail.snippet.channelTitle}`}>{videoDetail.snippet.channelTitle}</Link>
+                            </div>
                             <div className="count">
-                                <span className='view'>시청수 : {videoDetail.statistics
+                                <span className='view'><GrView /> {videoDetail.statistics
                                     .viewCount}</span>
-                                <span className="like">좋아요 : {videoDetail.statistics
+                                <span className="like"><GrLike /> {videoDetail.statistics
                                     .likeCount}</span>
-                                <span className="comment">댓글 : {videoDetail.statistics.commentCount}</span>
+                                <span className="comment"><GrTooltip /> {videoDetail.statistics.commentCount}</span>
+                            </div>
+                            <div className='desc'>
+                                <span>{videoDetail.snippet.description}</span>
                             </div>
                         </div>
                     </div>
