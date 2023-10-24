@@ -19,4 +19,4 @@ react-icons 설치 : `npm i react-icons`
 git add .
 git status
 git commit -m "커밋 제목"
-git push -u origin main
+git push -u origin main...
