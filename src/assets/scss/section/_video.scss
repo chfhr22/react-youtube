@@ -44,7 +44,26 @@
             }
         }
         &:hover {
-            background-color: var(--beige);
+            background-color: var(--white100);
+        }
+    }
+}
+
+// 비디오 상세페이지
+// #videoViewPage {
+//     padding: 0;
+// }
+.video__view {
+
+    .video__play {
+        width: 100%;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+    .video__info {
+
+        .video__title {
+            padding-top: 10px;
         }
     }
 }

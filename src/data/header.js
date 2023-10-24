@@ -25,11 +25,11 @@ export const menuText = [
 export const keywordText = [
     {
         title: "1분요리 뚝딱이형",
-        src: "/search/1분요리",
+        src: "/search/뚝딱이형",
     },
     {
         title: "먹어볼래TryToEat",
-        src: "/search/TryToEat",
+        src: "/search/먹어볼래",
     },
     {
         title: "취미로 요리하는 남자",
