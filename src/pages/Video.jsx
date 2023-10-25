@@ -36,7 +36,7 @@ const Video = () => {
                         </h2>
                         <div className="video__channel">
                             <div className="id">
-                                <Link to={`/channel/${videoDetail.snippet.channelTitle}`}>{videoDetail.snippet.channelTitle}</Link>
+                                <Link to={`/channel/${videoDetail.snippet.channelId}`}>{videoDetail.snippet.channelTitle}</Link>
                             </div>
                             <div className="count">
                                 <span className='view'><GrView /> {videoDetail.statistics

@@ -2,14 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { fetchFromAPI } from '../utils/api'
+import VideoSearch from '../components/video/VideoSearch';
 
-const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-}
+
 
 const Search = () => {
     const { searchId } = useParams();
@@ -24,27 +19,7 @@ const Search = () => {
         <section id='searchPage'>
         <h2>⭐ {searchId} 영상입니다.</h2>
         <div className='video__inner search'>
-            {videos.map((video, key) => (
-                <div className='video' key={key}>
-                    <div className='video__thumb play__icon'>
-                        <Link 
-                            to={`/video/${video.id.videoId}`}
-                            style={{ backgroundImage: `url(${video.snippet.thumbnails.high.url})`}}
-                        >
-                        </Link>
-                    </div>
-                    <div className='video__info'>
-                        <div className='title'>
-                            <Link to={`video/${video.id.videoId}`}>{video.snippet.title}</Link>
-                        </div>
-                        <div className="desc">{video.snippet.description}</div>
-                        <div className='info'>
-                            <Link to={`/channel/${video.snippet.channelId}`} className='author'>{video.snippet.channelTitle}</Link>
-                            <span className='date'>{formatDate(video.snippet.publishedAt)}</span>
-                        </div>
-                    </div>
-                </div>
-            ))}
+           <VideoSearch videos={videos}/>
         </div>
     </section>
         
